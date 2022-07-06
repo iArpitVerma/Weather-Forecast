@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= query  %> Weather</title>
+
+    
+    <!-- Bootstrap fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+
+    <style>
+      body{
+        background-color: #D8D2CB;
+        text-align: center;
+        overflow-x: hidden;
+      }
+      #heading{
+          padding-top: 2rem ;
+          color: #1C658C;
+          font-family: 'Lucida Handwriting' , 'Brush Script M7'  ;
+      }
+      h3{
+    color: #11CBD7;
+    font-family: cursive;
+      }
+    </style>
+</head>
+<body>
+    <h1 id="heading" class="fw-bold" ><strong><em>Weather Information</em></strong> </h1>
+    <div class="container">
+        <section class="mx-auto my-5 " style="max-width: 23rem;">
+            
+          <div class="card">
+            <div class="card-body">
+              <table >
+                <td>
+                  <h3 class="card-title font-weight-bold"><em><strong>
+                    <%= query  %> 
+                  </strong></em></h3>
+                  <h5 class="card-text"> 
+                    <%= weatherDescription %> 
+                  </h5>
+                </td>
+                <td>
+                  <img src= <%= imgUrl  %> >
+                </td>
+              </table>
+              
+              <div class="d-flex justify-content-between">
+                <p class="display-1 degree">
+                  <%= temp  %> °C 
+                </p>
+                <i class="fas fa-sun-o fa-5x pt-3 text-warning"></i>
+              </div>
+              <div class="d-flex justify-content-between mb-4">
+                <p><i class="fas fa-tint fa-lg text-info pe-2"></i>
+                  <%= humidity %>% Humidity</p>
+                <p><i class="fas fa-leaf fa-lg text-muted pe-2"></i>
+                  <%= windSpeed %> m/s Winds
+                </p>
+              </div>
+              <form action="" method="redirect" >
+                <button class="sbtn btn-lg btn-warning">Use Again!</button>
+              </form>
+          </div>
+          
+        </section>
+      </div>
+      <footer>
+        <p class="mt-5 mb-3 text-muted"> &copy;2022 Arpit Verma</p>
+      </footer>
+      
+    <script src="app.js"></script>
+    <!-- Bootstrap Fonts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
